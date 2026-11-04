@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew Cafe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <button id="theme-btn" type="button">Toggle Light/Dark Mode</button>
+        </div>
+
+        <h1>Brew Cafe</h1>
+        <p id="status">Checking opening hours...</p>
+
+        <nav aria-label="Main navigation">
+            <a href="#about">About Us</a>
+            <a href="#specials">Specials</a>
+            <a href="#menu">Menu</a>
+            <a href="#order">Order</a>
+            <a href="#feedback">Feedback</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Coffee, chai and fresh pastries</h2>
+                <p>Everything is brewed to order and our pastries are baked every morning.</p>
+                <a href="#menu" class="hero-btn">See the Menu</a>
+            </div>
+            <img src="cafee.jpg" alt="A latte with heart art and a croissant">
+        </section>
+
+        <article id="about">
+            <h2>About Us</h2>
+            <p>Brew Cafe started in 2019 with one kettle and a small oven. Our first customers were neighbours who came for tea and stayed to chat.</p>
+            <p id="extra-text" hidden>Today we still make our chai with cardamom, ginger and milk. Our croissants are prepared with care and baked fresh every morning.</p>
+            <button id="read-more-btn" type="button">Read More</button>
+        </article>
+
+        <section id="specials">
+            <h2>This Week's Specials</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Karak Chai</h3>
+                    <p>Strong tea cooked with cardamom and milk.</p>
+                </div>
+                <div class="card">
+                    <h3>Almond Croissant</h3>
+                    <p>A croissant filled with almond cream.</p>
+                </div>
+                <div class="card">
+                    <h3>Iced Latte</h3>
+                    <p>Espresso with cold milk and ice.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <div class="filters">
+                <button type="button" id="btn-all">All</button>
+                <button type="button" id="btn-drinks">Drinks</button>
+                <button type="button" id="btn-pastries">Pastries</button>
+            </div>
+
+            <table id="menu-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="drink"><td>Espresso</td><td>Drink</td><td>$3</td></tr>
+                    <tr class="drink"><td>Karak Chai</td><td>Drink</td><td>$2</td></tr>
+                    <tr class="drink"><td>Cappuccino</td><td>Drink</td><td>$4</td></tr>
+                    <tr class="pastry"><td>Croissant</td><td>Pastry</td><td>$4</td></tr>
+                    <tr class="pastry"><td>Cinnamon Roll</td><td>Pastry</td><td>$5</td></tr>
+                    <tr class="pastry"><td>Muffin</td><td>Pastry</td><td>$3</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="order">
+            <h2>Make Your Order</h2>
+            <ol type="A">
+                <li><label><input type="checkbox" class="item" value="3"> Espresso - $3</label></li>
+                <li><label><input type="checkbox" class="item" value="2"> Karak Chai - $2</label></li>
+                <li><label><input type="checkbox" class="item" value="4"> Cappuccino - $4</label></li>
+                <li><label><input type="checkbox" class="item" value="4"> Croissant - $4</label></li>
+                <li><label><input type="checkbox" class="item" value="5"> Cinnamon Roll - $5</label></li>
+            </ol>
+            <p id="total">Total: $0</p>
+        </section>
+
+        <section id="feedback">
+            <h2>Feedback Form</h2>
+            <form id="feedback-form">
+                <label for="username">Name:</label>
+                <input type="text" id="username" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="birth-year">Birth Year:</label>
+                <input type="text" id="birth-year" inputmode="numeric">
+
+                <p>How did you visit?</p>
+                <label class="inline"><input type="radio" name="visit" id="dine-in" checked> Dine-in</label>
+                <label class="inline"><input type="radio" name="visit" id="takeaway"> Takeaway</label>
+
+                <label for="special-notes">Special Instructions:</label>
+                <textarea id="special-notes" maxlength="100" rows="3"></textarea>
+                <p id="char-count">100 characters remaining</p>
+
+                <label class="inline"><input type="checkbox" id="newsletter"> Send me the weekly specials</label>
+
+                <button type="submit">Submit</button>
+            </form>
+            <p id="message" aria-live="polite"></p>
+            <p id="discount" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Brew Cafe - Open 8 AM to 10 PM</p>
+        <p><a href="mailto:hello@brewcafe.com">hello@brewcafe.com</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
