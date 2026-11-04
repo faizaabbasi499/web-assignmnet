@@ -1,0 +1,269 @@
+/* Basic page style */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eef2ec;
+    color: #1e2a24;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+    color: #2e5240;
+}
+
+header {
+    background-color: #2e5240;
+    text-align: center;
+    padding: 10px 20px 0;
+}
+
+.top-bar {
+    text-align: right;
+}
+
+header h1 {
+    color: white;
+    font-size: 48px;
+    margin: 10px 0 5px;
+}
+
+#status {
+    display: inline-block;
+    background-color: white;
+    font-weight: bold;
+    padding: 5px 18px;
+    border-radius: 20px;
+    margin: 5px 0 20px;
+}
+
+button {
+    background-color: #e0a526;
+    color: #1e2a24;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 3px;
+}
+
+button:hover {
+    background-color: #c98f1a;
+}
+
+nav {
+    border-top: 1px solid #5f8a73;
+    padding: 14px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 14px;
+}
+
+nav a:hover {
+    color: #e0a526;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section, article {
+    padding: 20px 0;
+    border-bottom: 1px solid #cbd6ce;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    margin: 0 0 10px;
+}
+
+.hero-text p {
+    font-size: 18px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: #2e5240;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-btn:hover {
+    background-color: #e0a526;
+    color: #1e2a24;
+}
+
+.hero img {
+    flex: 1;
+    width: 50%;
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    background-color: white;
+    border-left: 5px solid #e0a526;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #cbd6ce;
+}
+
+th {
+    background-color: #2e5240;
+    color: white;
+}
+
+#total {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2e5240;
+}
+
+form {
+    max-width: 500px;
+}
+
+form label:not(.inline) {
+    display: block;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.inline {
+    display: inline-block;
+    margin: 6px 12px 6px 0;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+#char-count {
+    font-size: 14px;
+    color: gray;
+    margin-top: 4px;
+}
+
+#message, #discount {
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+body.dark-mode {
+    background-color: #16201b;
+    color: #e6ede7;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode a {
+    color: #9ccbae;
+}
+
+body.dark-mode .card,
+body.dark-mode table {
+    background-color: #1f2c25;
+}
+
+body.dark-mode header {
+    background-color: #1f2c25;
+}
+
+body.dark-mode header h1,
+body.dark-mode nav a,
+body.dark-mode .hero-btn {
+    color: white;
+}
+
+body.dark-mode #total {
+    color: #9ccbae;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav a {
+        display: block;
+        margin: 6px 0;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .top-bar {
+        text-align: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 0;
+    }
+
+    .hero img {
+        width: 100%;
+    }
+
+    .hero-text h2 {
+        font-size: 26px;
+    }
+
+    th, td {
+        padding: 6px;
+        font-size: 14px;
+    }
+}
